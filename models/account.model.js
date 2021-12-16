@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true
       },
       phoneNumber: {
-        type: DataTypes.INTEGER,
-        allowNull: false
+        type: DataTypes.STRING(12),
+        allowNull: false,
+        unique: true
       },
       fullName: {
         type: DataTypes.STRING(80),
@@ -18,15 +19,16 @@ module.exports = (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING(150),
-        allowNull: false
+        allowNull: false,
+        unique:true
       },
-      emailConfimed: {
+      emailConfirmed: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
       },
       password: {
-        type: DataTypes.STRING(80),
+        type: DataTypes.STRING(255),
         allowNull: false
       },
       birthDay: {

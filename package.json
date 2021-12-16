@@ -7,6 +7,7 @@
     "test": "sequelize-auto -o \"./models\" -d demo_store -h localhost -u postgres -p 5432 -x admin -e postgres"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^10.0.0",

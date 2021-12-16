@@ -15,8 +15,7 @@ module.exports = function (fields = []) {
                     .regex(
                         /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựýỳỵỷỹ ]+$/
                     )
-                    .trim()
-                    .required();
+                    .trim();
             case "phoneNumber":
                 return Joi.string().regex(/^[0-9\-\+]{9,12}$/).required();
             case "email":
@@ -26,7 +25,7 @@ module.exports = function (fields = []) {
             case "avatar":
                 return Joi.string().max(255);
             case "isFemale":
-                return Joi.boolean().required();
+                return Joi.boolean();
             case "userSignIn":
                 // return Joi.string().required();
                 return Joi.alternatives().try(getSchema("email"), getSchema("phoneNumber")).required();

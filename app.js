@@ -12,7 +12,7 @@ const {sequelize} = require('./models');
 var app = express();
 (async () => {
     await assertDatabaseConnectionOk();
-    await sequelize.sync({ force: false });
+    // await sequelize.sync({ force: false });
 })();
 
 app.use(helmet());

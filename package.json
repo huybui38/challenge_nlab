@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "npm run seed-reset && npm run start",
+    "sync":"node ./db/sync",
+    "dev": "npm run sync && npm run seed-reset && npm run start",
     "seed": "npx sequelize-cli db:seed:all",
     "unseed": "npx sequelize-cli db:seed:undo:all",
     "seed-reset": "npm run unseed && npm run seed "

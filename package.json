@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev":"npm run seed-reset && npm run start",
+    "dev": "npm run seed-reset && npm run start",
     "seed": "npx sequelize-cli db:seed:all",
     "unseed": "npx sequelize-cli db:seed:undo:all",
     "seed-reset": "npm run unseed && npm run seed "
@@ -22,8 +22,7 @@
     "morgan": "~1.9.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.12.0-beta.3",
-    "sequelize-auto": "^0.8.8"
+    "sequelize": "^6.12.0-beta.3"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"

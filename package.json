@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "sequelize-auto -o \"./models\" -d demo_store -h localhost -u postgres -p 5432 -x admin -e postgres"
+    "dev":"npm run seed-reset && npm run start",
+    "seed": "npx sequelize-cli db:seed:all",
+    "unseed": "npx sequelize-cli db:seed:undo:all",
+    "seed-reset": "npm run unseed && npm run seed "
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

@@ -17,7 +17,7 @@ const updateInfo = AsyncCatch(async (req, res, next) => {
 const getInfo = AsyncCatch(async (req, res, next) => {
   if (req.accountID != req.params.accountID && req.role != ROLES.ADMINISTRATOR)  throw new Unauthorized("You don't have permission.");
     let user = await Account.findByPk(req.params.accountID);
-    
+    if (!user) throw new BadRequest("User not found!");
     if (user){
         let result = {
             ...user.dataValues

@@ -1,0 +1,3 @@
+create env
+docker-compose up
+run seeder for first time

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development node ./bin/www",
+    "start": "node ./bin/www",
     "test": "sequelize-auto -o \"./models\" -d demo_store -h localhost -u postgres -p 5432 -x admin -e postgres"
   },
   "dependencies": {

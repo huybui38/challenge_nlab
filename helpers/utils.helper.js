@@ -10,7 +10,7 @@ const AsyncCatch = (fn) => {
 };
 const getAccountToken = function ({accountID, specialID}){
     let role = specialID ? ROLES.STORE : ROLES.FREELANCER; 
-    return jwt.sign({ accountID, role }, process.env.JWT_SECRET_KEY);
+    return jwt.sign({ accountID, role }, process.env.JWT_SECRET_KEY, {expiresIn: "24h"});
 }
 const handleError = (err, req, res, next) => {
     if (err instanceof DefaultError) {

@@ -1,7 +1,8 @@
+## Documentation: [Postman](https://documenter.getpostman.com/view/9496143/UVR8q8X2) 
 ## Installation
 
 Demo requires [Docker](https://www.docker.com/) to run
-Documentation: [Postman](https://documenter.getpostman.com/view/9496143/UVR8q8X2) 
+
 * Create .env file from env.sample
 * Run docker-compose
 ```sh
